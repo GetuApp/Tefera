@@ -1,4 +1,4 @@
-name = "tefera-telegram-worker"
+name = "tefera"
 main = "telegram-worker.js"
 compatibility_date = "2024-12-18"
 
