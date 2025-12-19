@@ -1,0 +1,25 @@
+name = "tefera-telegram-worker"
+main = "telegram-worker.js"
+compatibility_date = "2024-12-18"
+
+# Production environment
+[env.production]
+vars = { TELEGRAM_BOT_TOKEN = "8550135384:AAF0ACGMdLmNBdmJGwDMWd8TFrAh9S_Sr28" }
+
+# Development environment (optional)
+[env.development]
+vars = { TELEGRAM_BOT_TOKEN = "8550135384:AAF0ACGMdLmNBdmJGwDMWd8TFrAh9S_Sr28" }
+
+# Routes (optional)
+routes = [
+  { pattern = "tefera-telegram-worker.getuapp.workers.dev", custom_domain = false }
+]
+
+# Triggers (cron jobs - optional)
+triggers = { crons = ["0 9 * * *"] }
+
+# Limits
+limits = { cpu_ms = 10 }
+
+# Logging
+logpush = true
